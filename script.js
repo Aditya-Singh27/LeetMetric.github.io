@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     function validUsername(username) {
-        if (username.trim == "") {
+        if (username.trim() == "") {
             alert("Username should not be empty")
             return false
         }
-        const regx = /^[a-zA-z0-9_-]{1,15}$/
+        const regx = /^[a-zA-Z0-9_-]{1,30}$/;
         const isMatching = regx.test(username)
         if (!isMatching) {
             alert("Invalid Username")
