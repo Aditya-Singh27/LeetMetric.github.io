@@ -95,9 +95,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     searchBtn.addEventListener("click", () => {
         const username = usernameInput.value
+    
         console.log(username)
         if (validUsername(username)) {
             fetchDetails(username)
         }
     })
+    
+    usernameInput.addEventListener("keydown" , (event) =>{
+            if(event.key == "Enter")
+                searchBtn.click()
+        })
 })
